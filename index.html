@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--语言声明-->
+<html lang="zh-CN">
+
+<head>
+    <!--全局属性声明-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--网页标题-->
+    <title>虚空境界</title>
+    <!--调用外部css-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--调用内部css-->
+    <style>
+        /* 设置背景 */
+        body {
+            width: auto;
+            height: auto;
+            background-color: #11e28b;
+            background-image: url(pic/bj.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+    <!-- 网站实时显示运行天数 -->
+    <script type="text/javascript">
+
+        function show_site_runtime() {
+            window.setTimeout("show_site_runtime()", 1000); // 每秒运行一次函数
+            X = new Date("01/02/2023 9:41:00"); //在这里修改你的建站时间,月/日/年 时/分/秒
+            Y = new Date();
+            T = (Y.getTime() - X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
+            i = 24 * 60 * 60 * 1000;
+            d = T / i;
+            D = Math.floor(d); // 计算天数并向下取整
+            h = (d - D) * 24;
+            H = Math.floor(h); // 计算剩余不足一天的小时数并向下取整
+            m = (h - H) * 60;
+            M = Math.floor(m); // 计算剩余不足一小时的分钟数并向下取整
+            s = (m - M) * 60
+            S = Math.floor(s); // 计算剩余不足一分钟的秒数并向下取整
+            site_runtime.innerHTML = D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 "
+        }
+        show_site_runtime();
+
+
+    </script>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header">
+        <div>
+            <p>这是导航栏</p>
+
+            <!--二级标题行内调用css-->
+            <h2 style="color:rgb(255, 0, 0);text-align:right;">This is a heading</h2>
+        </div>
+        <div>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+        </div>
+    </header>
+    <!--侧边栏-->
+    <aside id="aside">
+        <p>这是侧边栏</p>
+        <button>按钮</button>
+        <ul>
+            <li>Item one</li>
+            <li>Item two</li>
+            <li>Item three</li>
+        </ul>
+    </aside>
+    <!--文章主题-->
+    <article id="artical">
+        <div class="passage">
+            文章主体
+            <!--一级标题-->
+            <h1>
+                <p>这是一个一级标题</p>
+            </h1>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="passage">
+            文章主体
+            <div class="pic">
+                图
+            </div>
+            <!--一级标题-->
+            <h1>
+                <p>这是一个一级标题</p>
+            </h1>
+        </div>
+        <br>
+        <div class="passage">
+                文章主体
+                <!--一级标题-->
+                <h1>
+                    <p>这是一个一级标题</p>
+                </h1>
+        </div>
+        <br>
+    </article>
+    <!---->
+    <!--块-->
+    <div id="blok">
+        <p class="right">这是一个独立块</p>
+        <div>
+            啊
+        </div>
+    </div>
+    <!--尾部-->
+    <footer>
+        <p id="footer">
+            网站已艰难运行：<span id="site_runtime" style="color: #24a0f0;"></span>
+            <br>
+          </p>
+    </footer>
+</body>
+
+</html>
