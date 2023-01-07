@@ -10,26 +10,29 @@
     <!--网页标题-->
     <title>虚空境界</title>
     <!--调用外部css-->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <!--调用内部css-->
-    <style>
-        /* 设置背景 */
+    <link rel="stylesheet" type="text/css" href="css/my-css/html.css">
+    <link rel="stylesheet" type="text/css" href="css/my-css/body.css">
+    <link rel="stylesheet" type="text/css" href="css/my-css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/my-css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/list.css">
+
+    <!--调用内部css会被外部覆盖-->
+    <!-- <style>
+        /* 设置背景-外> */
         body {
             width: auto;
             height: auto;
-            background-color: #11e28b;
-            background-image: url(pic/bj.png);
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
         }
-    </style>
+    </style> -->
     <!-- 网站实时显示运行天数 -->
     <script type="text/javascript">
 
         function show_site_runtime() {
             window.setTimeout("show_site_runtime()", 1000); // 每秒运行一次函数
-            X = new Date("01/02/2023 9:41:00"); //在这里修改你的建站时间,月/日/年 时/分/秒
+            X = new Date("01/01/2023 16:36:09"); //在这里修改你的建站时间,月/日/年 时/分/秒
             Y = new Date();
             T = (Y.getTime() - X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
             i = 24 * 60 * 60 * 1000;
@@ -51,31 +54,84 @@
 
 <body>
     <!--头部-->
-    <header id="header">
-        <div>
-            <p>这是导航栏</p>
-
-            <!--二级标题行内调用css-->
-            <h2 style="color:rgb(255, 0, 0);text-align:right;">This is a heading</h2>
-        </div>
-        <div>
-            <button>按钮</button>
-            <button>按钮</button>
-            <button>按钮</button>
+    <header>
+        <div class="content">
+            <div>
+                <a href="#" class="loge">
+                    <!--二级标题行内调用css-->
+                    <h2 style="color:rgb(255, 255, 255);text-align:right;">虚空境界</h2>
+                    <h4 style="color:rgb(255, 255, 255);text-align:right;">VirtualDomain</h4>
+                </a>
+            </div>
+            <div>
+                <div class="un-loge">
+                    <div>
+                        <ul class="clickblock">
+                            <!--选项-->
+                            <li class="block"><a href="#">首页</a></li>
+                            <li class="block"><a href="#">博客</a></li>
+                            <li class="block"><a href="#">flow</a></li>
+                            <li class="block"><a href="#">归档</a></li>
+                            <li class="block"><a href="#">登录</a></li>
+                            <li class="block"><a href="#">传送</a></li>
+                        </ul>
+                    </div>
+                    <!--搜索栏-->
+                    <div class="search">
+                        <input type="text" placeholder="搜索">
+                        <i class="saving-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
+    <!-- 导航栏 -->
+    <nav>
+        <div>
+            <div>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <ul >
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!--侧边栏-->
-    <aside id="aside">
-        <p>这是侧边栏</p>
-        <button>按钮</button>
-        <ul>
-            <li>Item one</li>
-            <li>Item two</li>
-            <li>Item three</li>
-        </ul>
+    <aside>
+        <div>
+            <div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <div>
+                <div class="name"></div>
+                <div class=""></div>
+                <div class="updown"></div>
+            </div>
+
+        </div>
     </aside>
     <!--文章主题-->
-    <article id="artical">
+    <article>
         <div class="passage">
             文章主体
             <!--一级标题-->
@@ -98,28 +154,42 @@
         </div>
         <br>
         <div class="passage">
-                文章主体
-                <!--一级标题-->
-                <h1>
-                    <p>这是一个一级标题</p>
-                </h1>
+            文章主体
+            <!--一级标题-->
+            <h1>
+                <p>这是一个一级标题</p>
+            </h1>
         </div>
         <br>
     </article>
-    <!---->
-    <!--块-->
-    <div id="blok">
-        <p class="right">这是一个独立块</p>
-        <div>
-            啊
-        </div>
-    </div>
+    <!--占地方用-->
+    <main>
+    </main>
+
     <!--尾部-->
     <footer>
-        <p id="footer">
-            网站已艰难运行：<span id="site_runtime" style="color: #24a0f0;"></span>
-            <br>
-          </p>
+        <div class="content">
+            <div class="loge">
+                <!--二级标题行内调用css-->
+                <h2 style="color:rgb(255, 255, 255);">VirtualDomain</h2>
+            </div>
+            <div class="text">
+                <h5>
+                    幻想沉入虚空中已经：<span id="site_runtime"></span>
+                    <br>
+                </h5>
+            </div>
+            <div class="link">
+                <a href="#"><i class="loge-bilibili"></i></a>
+                <a href="#"><i class="loge-wechat-official"></i></a>
+                <a href="#"><i class="loge-qq-group"></i></a>
+                <a href="#"><i class="loge-music163"></i></a>
+                <a href="#"><i class="loge-youtube"></i></a>
+                <a href="#"><i class="loge-twiter"></i></a>
+                <a href="#"><i class="loge-telegram"></i></a>
+                <a href="#"><i class="loge-else"></i></a>
+            </div>
+        </div>
     </footer>
 </body>
 
