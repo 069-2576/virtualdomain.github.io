@@ -1,6 +1,6 @@
 /* 页脚css*/
 footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     display: fixed;

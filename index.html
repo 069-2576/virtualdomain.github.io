@@ -15,7 +15,9 @@
     <link rel="stylesheet" type="text/css" href="css/my-css/header.css">
     <link rel="stylesheet" type="text/css" href="css/my-css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/list.css">
-
+    <!-- 烟花css -->
+    <link rel="stylesheet" type="text/css" href="pretime/css/fireworks.css">
+    
     <!--调用内部css会被外部覆盖-->
     <!-- <style>
         /* 设置背景-外> */
@@ -54,7 +56,7 @@
 
 <body>
     <!--头部-->
-    <header>
+    <header id="headeer">
         <div class="content">
             <div>
                 <a href="#" class="loge">
@@ -86,7 +88,7 @@
         </div>
     </header>
     <!-- 导航栏 -->
-    <nav>
+    <nav id="nav">
         <div>
             <div>
                 <ul>
@@ -99,7 +101,7 @@
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
-                <ul >
+                <ul>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
@@ -109,6 +111,11 @@
             </div>
         </div>
     </nav>
+    <!-- 烟花区域 -->
+    <div id="fireworks">
+        <canvas></canvas>
+        <span class="pen"></span>
+    </div>
     <!--侧边栏-->
     <aside>
         <div>
@@ -130,38 +137,25 @@
 
         </div>
     </aside>
-    <!--文章主题-->
-    <article>
-        <div class="passage">
-            文章主体
-            <!--一级标题-->
-            <h1>
-                <p>这是一个一级标题</p>
-            </h1>
-        </div>
-        <br>
-        <hr>
-        <br>
-        <div class="passage">
-            文章主体
-            <div class="pic">
-                图
-            </div>
-            <!--一级标题-->
-            <h1>
-                <p>这是一个一级标题</p>
-            </h1>
-        </div>
-        <br>
-        <div class="passage">
-            文章主体
-            <!--一级标题-->
-            <h1>
-                <p>这是一个一级标题</p>
-            </h1>
-        </div>
-        <br>
-    </article>
+    <!--文章-->
+    <div class="article">
+        <a class="#" href="#" data-sr-id="#"
+            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.2s ease-out 0s, opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;">
+            <article class="md-text">
+                <h2 class="post-title"></h2>
+                <div class="excerpt">
+                    <p></p>
+                </div>
+                <div class="#">
+                    <span class="#" id="#">
+                        发布于<!--&nbsp;-->
+                        <time datetime="#">#</time>
+                    </span>
+                    <span class="#" style="color:#fff">#</span>
+                </div>
+            </article>
+        </a>
+    </div>
     <!--占地方用-->
     <main>
     </main>
@@ -194,3 +188,26 @@
 </body>
 
 </html>
+<script>
+
+    //获取导航栏和按量元素
+    var header = document.getElementById("header")
+    var nav = document.getElementById("nav")
+    //滚动滚动条触发事件
+    window.onscroll = function () {
+        //获取滚动条位置
+        var movehight = document.documentElement.scrollTop || document.body.scrollTop
+        //判断滚动条位置
+        if (moveheight >= "175px") {
+            header.style.display = "none"    //隐藏header
+            nav.style.display = "block"	 //显示nav
+        }
+        else {
+            nav.style.display = "none"     //隐藏nav
+            header.style.display = "block" //显示header
+        }
+    }
+
+</script>
+<!-- 烟花js -->
+<script src="/pretime/js/fireworks.js"></script>
