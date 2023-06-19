@@ -17,18 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/list.css">
     <!-- 烟花css -->
     <link rel="stylesheet" type="text/css" href="pretime/css/fireworks.css">
-    
     <!--调用内部css会被外部覆盖-->
-    <!-- <style>
-        /* 设置背景-外> */
-        body {
-            width: auto;
-            height: auto;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-        }
-    </style> -->
     <!-- 网站实时显示运行天数 -->
     <script type="text/javascript">
 
@@ -111,11 +100,6 @@
             </div>
         </div>
     </nav>
-    <!-- 烟花区域 -->
-    <div id="fireworks">
-        <canvas></canvas>
-        <span class="pen"></span>
-    </div>
     <!--侧边栏-->
     <aside>
         <div>
@@ -188,26 +172,3 @@
 </body>
 
 </html>
-<script>
-
-    //获取导航栏和按量元素
-    var header = document.getElementById("header")
-    var nav = document.getElementById("nav")
-    //滚动滚动条触发事件
-    window.onscroll = function () {
-        //获取滚动条位置
-        var movehight = document.documentElement.scrollTop || document.body.scrollTop
-        //判断滚动条位置
-        if (moveheight >= "175px") {
-            header.style.display = "none"    //隐藏header
-            nav.style.display = "block"	 //显示nav
-        }
-        else {
-            nav.style.display = "none"     //隐藏nav
-            header.style.display = "block" //显示header
-        }
-    }
-
-</script>
-<!-- 烟花js -->
-<script src="/pretime/js/fireworks.js"></script>
