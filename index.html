@@ -1,173 +1,39 @@
 <!DOCTYPE html>
-<!--语言声明-->
 <html lang="zh-CN">
 
 <head>
-    <!--全局属性声明-->
     <meta charset="UTF-8">
+    <meta content="origin" name="referrer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--网页标题-->
-    <title>虚空境界</title>
-    <!--调用外部css-->
-    <link rel="stylesheet" type="text/css" href="css/my-css/html.css">
-    <link rel="stylesheet" type="text/css" href="css/my-css/body.css">
-    <link rel="stylesheet" type="text/css" href="css/my-css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/my-css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/list.css">
-    <!-- 烟花css -->
-    <link rel="stylesheet" type="text/css" href="pretime/css/fireworks.css">
-    <!--调用内部css会被外部覆盖-->
-    <!-- 网站实时显示运行天数 -->
-    <script type="text/javascript">
-
-        function show_site_runtime() {
-            window.setTimeout("show_site_runtime()", 1000); // 每秒运行一次函数
-            X = new Date("01/01/2023 16:36:09"); //在这里修改你的建站时间,月/日/年 时/分/秒
-            Y = new Date();
-            T = (Y.getTime() - X.getTime()); // 获取当前时间与指定时间之间的时间间隔（ms）	
-            i = 24 * 60 * 60 * 1000;
-            d = T / i;
-            D = Math.floor(d); // 计算天数并向下取整
-            h = (d - D) * 24;
-            H = Math.floor(h); // 计算剩余不足一天的小时数并向下取整
-            m = (h - H) * 60;
-            M = Math.floor(m); // 计算剩余不足一小时的分钟数并向下取整
-            s = (m - M) * 60
-            S = Math.floor(s); // 计算剩余不足一分钟的秒数并向下取整
-            site_runtime.innerHTML = D + " 天 " + H + " 小时 " + M + " 分 " + S + " 秒 "
-        }
-        show_site_runtime();
-
-
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>VirtualDomain</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <!--头部-->
-    <header id="headeer">
-        <div class="content">
-            <div>
-                <a href="#" class="loge">
-                    <!--二级标题行内调用css-->
-                    <h2 style="color:rgb(255, 255, 255);text-align:right;">虚空境界</h2>
-                    <h4 style="color:rgb(255, 255, 255);text-align:right;">VirtualDomain</h4>
-                </a>
+    <header>
+        <div class="shell">
+            <div class="loge">
+                <h2>VirtualDomain</h2>
             </div>
-            <div>
-                <div class="un-loge">
-                    <div>
-                        <ul class="clickblock">
-                            <!--选项-->
-                            <li class="block"><a href="#">首页</a></li>
-                            <li class="block"><a href="#">博客</a></li>
-                            <li class="block"><a href="#">flow</a></li>
-                            <li class="block"><a href="#">归档</a></li>
-                            <li class="block"><a href="#">登录</a></li>
-                            <li class="block"><a href="#">传送</a></li>
-                        </ul>
-                    </div>
-                    <!--搜索栏-->
-                    <div class="search">
-                        <input type="text" placeholder="搜索">
-                        <i class="saving-search" aria-hidden="true"></i>
-                    </div>
-                </div>
+            <div class="click_block">
+                <li class="block"><a href="/blog/index.html">blog</a></li>
+                <li class="block"><a href="">project</a></li>
+                <li class="block"><a href="">music</a></li>
+                <li class="block"><a href="">game</a></li>
+                <li class="block"><a href="">link</a></li>
+                <li class="block"><a href="https://www.foreverblog.cn/go.html">虫洞</a></li>
+                <li class="block"><a href="https://travellings.link">友链</a></li>
+            </div>
+            <!-- block转user -->
+            <div class="block">
+                <div><a href="/log/index.html">log</a></div>
             </div>
         </div>
     </header>
-    <!-- 导航栏 -->
-    <nav id="nav">
-        <div>
-            <div>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--侧边栏-->
-    <aside>
-        <div>
-            <div>
-                <div>
-
-                </div>
-            </div>
-        </div>
-        <div>
-
-        </div>
-        <div>
-            <div>
-                <div class="name"></div>
-                <div class=""></div>
-                <div class="updown"></div>
-            </div>
-
-        </div>
-    </aside>
-    <!--文章-->
-    <div class="article">
-        <a class="#" href="#" data-sr-id="#"
-            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.2s ease-out 0s, opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s;">
-            <article class="md-text">
-                <h2 class="post-title"></h2>
-                <div class="excerpt">
-                    <p></p>
-                </div>
-                <div class="#">
-                    <span class="#" id="#">
-                        发布于<!--&nbsp;-->
-                        <time datetime="#">#</time>
-                    </span>
-                    <span class="#" style="color:#fff">#</span>
-                </div>
-            </article>
-        </a>
+    <div>
     </div>
-    <!--占地方用-->
-    <main>
-    </main>
-
-    <!--尾部-->
     <footer>
-        <div class="content">
-            <div class="loge">
-                <!--二级标题行内调用css-->
-                <h2 style="color:rgb(255, 255, 255);">VirtualDomain</h2>
-            </div>
-            <div class="text">
-                <h5>
-                    幻想沉入虚空中已经：<span id="site_runtime"></span>
-                    <br>
-                </h5>
-            </div>
-            <div class="link">
-                <a href="#"><i class="loge-bilibili"></i></a>
-                <a href="#"><i class="loge-wechat-official"></i></a>
-                <a href="#"><i class="loge-qq-group"></i></a>
-                <a href="#"><i class="loge-music163"></i></a>
-                <a href="#"><i class="loge-youtube"></i></a>
-                <a href="#"><i class="loge-twiter"></i></a>
-                <a href="#"><i class="loge-telegram"></i></a>
-                <a href="#"><i class="loge-else"></i></a>
-            </div>
-        </div>
     </footer>
 </body>
 
